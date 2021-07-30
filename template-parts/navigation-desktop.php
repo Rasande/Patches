@@ -8,7 +8,7 @@
 defined('ABSPATH') || exit; ?>
 
 
-<nav role="navigation" class="navigation navigation--desktop">
+<nav class="navigation navigation--desktop">
     <?php wp_nav_menu(array(
         'theme_location' => 'desktop',
         'container' => '',

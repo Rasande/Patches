@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit; ?>
 
-<nav menu-name="mobile" role="navigation" class="navigation--mobile">
+<nav data-name="mobile" class="navigation--mobile">
     <?php wp_nav_menu(array(
         'theme_location' => 'mobile',
         'container' => '',

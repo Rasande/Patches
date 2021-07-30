@@ -2,7 +2,6 @@
 @use '../abstracts/mixins'as *;
 
 :root {
-
     @each $name,
     $color in $theme-colors {
         --#{$name}: #{$color};
@@ -14,7 +13,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 16px;
 }
 
 body {
@@ -35,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-secondary;
     line-height: $line-height-heading;
     color: $heading-color;
-
 }
 
 h1, .h1 {
@@ -72,6 +70,10 @@ p {
     line-height: $line-height-base;
 }
 
+p:empty {
+    margin-bottom: 0;
+}
+
 b, strong, .bold {
     font-weight: bold;
 }
@@ -82,6 +84,10 @@ pre, code, kbd, samp {
 
 a:not([class]) {
     text-decoration-skip-ink: auto;
+}
+
+a, button {
+    touch-action: manipulation;
 }
 
 cite {
@@ -155,7 +161,6 @@ figcaption {
 }
 
 // Utility
-
 .text-center {
     text-align: center;
 }

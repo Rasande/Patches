@@ -1,8 +1,10 @@
+import Utility from "./utility"
+
 class MobileMenu {
     constructor() {
         this.header = document.querySelector('.site-header')
-        this.toggleMenu = document.querySelectorAll('[toggle-menu]')
-        this.menu = document.querySelectorAll('[menu-name]')
+        this.toggleMenu = document.querySelectorAll('[data-toggle]')
+        this.menu = document.querySelectorAll('[data-name]')
         this.submenuBtn = document.querySelectorAll('.submenu-btn')
         this.isMenuOpen = false
         this.events()
@@ -26,9 +28,9 @@ class MobileMenu {
     }
 
     triggerMenu(e) {
-        const target = e.currentTarget.getAttribute('toggle-menu')
-        const targetMenu = document.querySelector('[menu-name="' + target + '"]')
-        const otherMenus = document.querySelectorAll('[menu-name]:not([menu-name="' + target + '"])')
+        const target = e.currentTarget.getAttribute('data-toggle')
+        const targetMenu = document.querySelector('[data-name="' + target + '"]')
+        const otherMenus = document.querySelectorAll('[data-name]:not([data-name="' + target + '"])')
 
         if (!targetMenu.classList.contains('is-open')) {
             // Close other open menus first
@@ -47,13 +49,10 @@ class MobileMenu {
     }
 
     openMenu(menu) {
-        const id = menu.getAttribute('menu-name')
-        const menuBtn = document.querySelector('[toggle-menu="' + id + '"]')
+        const id = menu.getAttribute('data-name')
+        const menuBtn = document.querySelector('[data-toggle="' + id + '"]')
 
-        const scrollY = window.scrollY
-
-        document.body.style.position = 'fixed'
-        document.body.style.top = -scrollY + 'px'
+        Utility.bodyScrollLock()
 
         this.header.classList.add('is-scrolled')
 
@@ -66,13 +65,10 @@ class MobileMenu {
     }
 
     closeMenu(menu) {
-        const id = menu.getAttribute('menu-name')
-        const menuBtn = document.querySelector('[toggle-menu="' + id + '"]')
+        const id = menu.getAttribute('data-name')
+        const menuBtn = document.querySelector('[data-toggle="' + id + '"]')
 
-        const bodyStyle = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        window.scrollTo(0, parseInt(bodyStyle || 0) * -1);
+        Utility.bodyScrollUnlock()
 
         menu.classList.remove('is-open')
         menuBtn.classList.remove('is-active')

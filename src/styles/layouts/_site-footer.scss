@@ -1,10 +1,11 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
+@use '../components/buttons'as *;
 
 .site-footer {
     margin-top: $space-xl;
     padding: $space-xl 0 $space-lg;
-    background-color: $color-secondary;
+    background-color: $color-primary;
     color: $color-light;
 
     a {
@@ -23,6 +24,11 @@
     ul {
         list-style: none;
         padding-left: 0;
+    }
+    input[type=submit] {
+        @extend .btn;
+        @extend .btn-secondary;
+        width: auto;
     }
 }
 

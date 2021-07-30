@@ -7,6 +7,10 @@
 
 defined('ABSPATH') || exit; ?>
 
+<?php if (class_exists('ACF')) {
+	$footer = get_field('footer', 'option');
+} ?>
+
 <!-- Site footer -->
 <footer class="site-footer">
 
@@ -37,13 +41,19 @@ defined('ABSPATH') || exit; ?>
 
 		<!-- Copyright Information -->
 		<div class="copyright">
-			<p>&copy; <?php echo bloginfo('name'); ?> <?php echo date("Y"); ?></p>
+			<p>&copy;
+				<?php if ($footer['text']) : ?>
+					<?php echo $footer['text']; ?>
+				<?php else : ?>
+					<?php echo bloginfo('name'); ?>
+				<?php endif; ?>
+				<?php echo ' - ' . date("Y"); ?></p>
 		</div>
 
 	</div>
 
 </footer>
-
+</div>
 <?php wp_footer(); ?>
 
 </body>

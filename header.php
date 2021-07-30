@@ -22,23 +22,25 @@ defined('ABSPATH') || exit; ?>
 
 <body itemscope itemtype="http://schema.org/WebPage" <?php body_class(); ?>>
 	<?php do_action('wp_body_open'); ?>
+	<div class="site">
+		<!-- Site header -->
+		<header class="site-header is-fixed">
+			<div class="site-header__inner container-fluid">
+				<a class="skip-to-content-link" href="#main">
+					<?php _e('Skip to content', 'rasande') ?>
+				</a>
+				<!-- Site header brand -->
+				<?php get_template_part('template-parts/brand'); ?>
 
-	<!-- Site header -->
-	<header class="site-header is-fixed">
-		<div class="site-header__inner container-fluid">
+				<!-- Desktop navigation -->
+				<?php get_template_part('template-parts/navigation', 'desktop'); ?>
 
-			<!-- Site header brand -->
-			<?php get_template_part('template-parts/brand'); ?>
+				<!-- Site header controls -->
+				<?php get_template_part('template-parts/controls'); ?>
 
-			<!-- Desktop navigation -->
-			<?php get_template_part('template-parts/navigation', 'desktop'); ?>
+			</div>
 
-			<!-- Site header controls -->
-			<?php get_template_part('template-parts/controls'); ?>
+			<!-- Site header mobile navigation -->
+			<?php get_template_part('template-parts/navigation', 'mobile'); ?>
 
-		</div>
-
-		<!-- Site header mobile navigation -->
-		<?php get_template_part('template-parts/navigation', 'mobile'); ?>
-
-	</header>
+		</header>

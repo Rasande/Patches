@@ -3,8 +3,8 @@ $font-primary: 'Open sans', sans-serif;
 $font-secondary: 'Archivo', sans-serif;
 $font-mono: SFMono-Regular, monospace;
 
-$font-size-base: 1.6rem;
-$font-size-sm: 1.4rem;
+$font-size-base: 1rem;
+$font-size-sm: 0.825rem;
 $font-sizes-display: (null: 3.2rem, sm: 4.2, md: 6.2rem);
 $font-sizes-h1: (null: 2.9rem, sm: 3.9rem, md: 4.9rem);
 $font-sizes-h2: (null: 2.5rem, sm: 3.2rem, md: 3.9rem);
@@ -15,25 +15,25 @@ $line-height-base: 1.5;
 $line-height-heading: 1.25;
 
 // Colors
-$color-primary: #a81010;
-$color-secondary: #790b0b;
+$color-primary: #3858e9;
+$color-secondary: #33f078;
 $color-tertiary: red;
 $color-quaternary:#f0b434;
 $color-light: #ffffff;
-$color-dark: #3c3b3b;
+$color-dark: #2c3338;
 
 $color-success: #6cbd7f;
 $color-warning: #ffc107;
 $color-danger: #dc3545;
 
-$body-bg: #f4f4f4;
-$text-color: #646464;
-$text-color-secondary:#aaaaaa;
+$body-bg: #f0f0f1;
+$text-color: $color-dark;
+$text-color-secondary:#BCBCBC;
 $heading-color: $color-dark;
 $link-color: $heading-color;
 $link-hover-color: $color-primary;
 $selection-color: $color-light;
-$selection-bg: #3297FD;
+$selection-bg: $color-primary;
 
 $theme-colors: (primary, $color-primary), (secondary, $color-secondary), (tertiary, $color-tertiary), (quaternary, $color-quaternary), (light, $color-light), (dark, $color-dark);
 
@@ -45,7 +45,7 @@ $border-radius-sm: 2px;
 $breakpoints: (xs: 576px, sm: 680px, md: 960px, lg: 1680px, xl: 1920px);
 
 // Sizing
-$space-unit: 2rem;
+$space-unit: 1.25rem;
 
 $space-xs: $space-unit * .25;
 $space-sm: $space-unit * .75;
@@ -63,3 +63,7 @@ $grid-margin: $grid-gutter / 2;
 
 // Navigation
 $navbar-expand: md;
+
+// Shadow
+$box-shadow: 0px 26px 24px -22px rgba($color-secondary,0.1);
+$box-shadow-up: 0px -26px 24px -22px rgba($color-secondary,0.1);

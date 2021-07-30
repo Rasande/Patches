@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rasande\n"
-"POT-Creation-Date: 2021-02-08 11:08+0100\n"
-"PO-Revision-Date: 2021-02-08 11:08+0100\n"
+"POT-Creation-Date: 2021-06-23 10:02+0200\n"
+"PO-Revision-Date: 2021-06-23 10:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -22,11 +22,11 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: 404.php:19
+#: 404.php:26
 msgid "The page cannot be found"
 msgstr "Sidan kan inte hittas"
 
-#: 404.php:20
+#: 404.php:29
 msgid "Back to homepage"
 msgstr "Till startsidan"
 
@@ -106,23 +106,27 @@ msgstr "Fotkolumn 2"
 msgid "Footer column 3"
 msgstr "Fotkolumn 3"
 
-#: inc/acf.php:11 inc/acf.php:12
+#: header.php:30
+msgid "Skip to content"
+msgstr "Hoppa till innehållet"
+
+#: inc/acf.php:12 inc/acf.php:13
 msgid "Theme settings"
 msgstr "Temainställningar"
 
-#: inc/walkers.php:54
+#: inc/theme-functions.php:28
+msgid "ago"
+msgstr ""
+
+#: inc/walker.php:60
 #, php-format
 msgid "Show submenu for %s"
 msgstr "Visa undermeny för %s"
 
-#: inc/walkers.php:104
-msgid "Add a menu"
-msgstr "Lägg till meny"
-
 #: search.php:35
 #, php-format
 msgid "No results found for \"%s\""
-msgstr "Inga resultat hittade för \"%s\""
+msgstr "Inga resultat hittades för \"%s\""
 
 #: template-parts/controls.php:15
 msgid "Search..."
@@ -163,6 +167,9 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://rasande.se"
 msgstr ""
+
+#~ msgid "Add a menu"
+#~ msgstr "Lägg till meny"
 
 #~ msgid "Sorry, we can't find the page you were looking for."
 #~ msgstr "Vi kan tyvärr inte hitta sidan du letade efter."

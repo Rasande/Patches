@@ -1,0 +1,18 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
+// Color
+.color-primary {color: $color-primary;}
+.color-secondary { color: $color-secondary;}
+.color-tertiary { color: $color-tertiary;}
+.color-quaternary { color: $color-quaternary;}
+.color-light { color: $color-light;}
+.color-dark { color: $color-dark;}
+
+// Background
+.bg-primary {background-color: $color-primary;}
+.bg-secondary { background-color: $color-secondary;}
+.bg-tertiary { background-color: $color-tertiary;}
+.bg-quaternary { background-color: $color-quaternary;}
+.bg-light { background-color: $color-light;}
+.bg-dark { background-color: $color-dark;}

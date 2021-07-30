@@ -198,7 +198,7 @@ $rasande_includes = array(
 	'filters',
 	'theme-functions',
 	'acf',
-	'walkers',
+	'walker',
 );
 
 foreach ($rasande_includes as $file) {

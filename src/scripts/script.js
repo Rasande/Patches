@@ -1,6 +1,7 @@
 import MobileMenu from './modules/mobileMenu'
 import Animations from './modules/animation'
 import Search from './modules/search'
+import Forms from './modules/forms'
 
 // Load JS when DOM is ready
 function rasandeDomReady(fn) {
@@ -18,4 +19,5 @@ rasandeDomReady(function() {
     const mobileMenu = new MobileMenu()
     const animation = new Animations()
     const search = new Search()
+    const forms = new Forms()
 });

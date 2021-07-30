@@ -30,3 +30,11 @@ if (!function_exists('rasande_time_diff')) {
         return $date;
     }
 }
+
+if (!function_exists('show_pagination')) {
+    function show_pagination() {
+        global $wp_query;
+        
+        return ($wp_query->max_num_pages > 1);
+    }
+}

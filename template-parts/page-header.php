@@ -1,42 +1,44 @@
 <?php
 
 /**
- * Entry header
+ * Page header
  * 
  */
 
 defined('ABSPATH') || exit;
 
-if (class_exists('ACF')) {
-    $customTitle = get_field('page_title');
-    $customLead = get_field('page_lead');
-    $leadChoice = get_field('page_lead-choice');
-} ?>
+$customHeading = '';
+
+if (class_exists('ACF') && !is_archive()) :
+    // Make custom heading available for posts page
+    if (is_home()) :
+        $customHeading = get_field('page_head', get_option('page_for_posts'))['custom_heading'];
+    else :
+        $customHeading = get_field('page_head')['custom_heading'];
+    endif;
+endif;
+
+if ($customHeading) :
+    // Custom title
+    $heading = $customHeading;
+else :
+    // Archive title
+    if (is_archive()) :
+        $heading = get_the_archive_title();
+    // Posts page title
+    elseif (!is_front_page() && is_home()) :
+        $heading = single_post_title('', false);
+    // Search page title
+    elseif (is_search()) :
+        $heading = __('Search Results For', 'rasande') . ': ' . get_search_query();
+    // Title for pages and posts
+    else :
+        $heading = get_the_title();
+    endif;
+endif; ?>
 
 <header class="page-header">
     <div class="container-wide">
-
-        <?php if (is_archive()) : ?>
-            <h1 class="page-header__title"><?php the_archive_title(); ?></h1>
-        <?php elseif (!is_front_page() && is_home()) : ?>
-            <h1 class="page-header__title"><?php single_post_title(); ?></h1>
-
-        <?php elseif (is_search()) : ?>
-            <h1 class="page-header__title"><?php _e('Search Results For', 'rasande'); ?>: "<?php the_search_query(); ?>"</h1>
-        <?php else : ?>
-            <?php if ($customTitle) : ?>
-                <h1 class="page-header__title"><?php echo $customTitle; ?></h1>
-            <?php else : ?>
-                <h1 class="page-header__title"><?php echo get_the_title(); ?></h1>
-            <?php endif; ?>
-            <div class="page-header__lead">
-                <?php if ($leadChoice == 'excerpt' && has_excerpt()) :
-                    the_excerpt();
-                elseif ($leadChoice == 'lead' && $customLead) :
-                    echo $customLead;
-                endif; ?>
-            </div>
-        <?php endif; ?>
-
+        <h1 class="page-header__title"><?php echo $heading; ?></h1>
     </div>
 </header>
