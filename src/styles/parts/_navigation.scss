@@ -166,6 +166,7 @@ Mobile navigation
         width: 100%;
         padding: $space-md $space-md;
         color: inherit;
+        outline-offset: -2px;
     }
 
     .nav__item:hover>.nav__item--link {
@@ -181,6 +182,7 @@ Mobile navigation
         background-color: transparent;
         padding: 0 $space-lg;
         line-height: 0;
+        outline-offset: -2px;
 
         i {
             transform: rotate(45deg);

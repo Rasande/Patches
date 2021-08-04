@@ -1,25 +1,36 @@
-import Utility from "./utility"
+import Utility from "./utility";
 
 class Forms {
+  constructor() {
+    this.textarea = document.querySelectorAll("textarea");
+    this.select = document.querySelectorAll("select");
+    this.customSelectDropdown();
+    this.events();
+  }
 
-    constructor() {
-        this.textarea = document.querySelector('textarea')
-        this.events()
+  events() {
+    if (typeof this.textarea != "undefined" && this.textarea != null) {
+      this.textarea.forEach((el) => {
+        el.addEventListener("keyup", (e) => {
+          e.preventDefault();
+          this.setTextareaHeight(el);
+        });
+      });
     }
+  }
 
-    events() {
-        
-        if(typeof(this.textarea) != 'undefined' && this.textarea != null){
-            this.textarea.addEventListener('keyup', () => this.setTextareaHeight())
-        }
+  setTextareaHeight(el) {
+    const target = el;
+    target.style.height = Utility.textareaHeight(target.value) + "px";
+  }
 
+  customSelectDropdown() {
+    if (typeof this.select != "undefined" && this.select != null) {
+      this.select.forEach((el) => {
+        // make custom select element here.
+      });
     }
-
-    setTextareaHeight() {
-        this.textarea.style.height = Utility.textareaHeight(this.textarea.value) + "px"
-        console.log('yo')
-    }
-
+  }
 }
 
-export default Forms
+export default Forms;

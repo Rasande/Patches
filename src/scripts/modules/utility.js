@@ -20,7 +20,6 @@ class Utility {
             return newHeight;
     }
 
-
     static mobileCheck() {
         /* http://detectmobilebrowsers.com/ */
         let check = false;
