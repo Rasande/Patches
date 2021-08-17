@@ -3,10 +3,7 @@
 # Ignore all directories called node_modules in current folder and any subfolders.
 node_modules/
 /node_modules/
-dev/
-/dev/
-.dev
-.vscode
+
 
 # Packages #
 ############
@@ -74,3 +71,5 @@ assets/img/.DS_Store
 # VS Code #
 ##########
 *.code-workspace
+.vscode
+.dev
