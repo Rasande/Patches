@@ -87,6 +87,7 @@ a:not([class]) {
 }
 
 a, button {
+    line-height: $line-height-base;
     touch-action: manipulation;
 }
 
