@@ -71,5 +71,9 @@ assets/img/.DS_Store
 # VS Code #
 ##########
 *.code-workspace
-.vscode
 .dev
+.vscode/**/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
