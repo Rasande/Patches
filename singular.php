@@ -11,7 +11,7 @@ get_header(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
 
                 <!-- Page header -->
-                <?php get_template_part('template-parts/page', 'header'); ?>
+                <?php get_template_part('inc/parts/page-header'); ?>
 
                 <!-- Page content -->
                 <div class="block-content">
