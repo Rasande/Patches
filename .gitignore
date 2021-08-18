@@ -72,6 +72,8 @@ assets/img/.DS_Store
 ##########
 *.code-workspace
 .dev
+.vscode
+.vscode/*
 .vscode/**/*
 !.vscode/settings.json
 !.vscode/tasks.json
