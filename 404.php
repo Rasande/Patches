@@ -1,15 +1,10 @@
 <?php
 
-/**
- * The 404 template file
- * 
- */
+defined('ABSPATH') || exit;
 
-defined('ABSPATH') || exit; ?>
+get_header();
 
-<?php get_header(); ?>
-
-<?php if (class_exists('ACF')) {
+if (class_exists('ACF')) {
     $notFound = get_field('not_found', 'option');
 } ?>
 

@@ -3,9 +3,9 @@ const projectURL = 'localhost'
 const browserAutoOpen = false
 
 // Source paths
-const styleSrc = './src/styles/style.scss'
-const editorStyleSrc = './src/styles/editor-style.scss'
-const scriptSrc = './src/scripts/script.js'
+const styleSrc = './src/styles/main.scss'
+const editorStyleSrc = './src/styles/editor.scss'
+const scriptSrc = './src/scripts/main.js'
 
 // Destination paths
 const styleDest = './assets/css'

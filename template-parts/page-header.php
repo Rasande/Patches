@@ -38,7 +38,8 @@ else :
 endif; ?>
 
 <header class="page-header">
-    <div class="container-wide">
+    <div class="container">
         <h1 class="page-header__title"><?php echo $heading; ?></h1>
+        <?php get_template_part('template-parts/breadcrumbs'); ?>
     </div>
 </header>

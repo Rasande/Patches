@@ -1,12 +1,10 @@
 <?php
 
-/**
- * WP Bootstrap Navwalker
- *
- */
-
 defined('ABSPATH') || exit;
 
+/* ---------------------------------------------------------------------------------------------------
+    Navigation walker
+--------------------------------------------------------------------------------------------------- */
 if (!class_exists('Rasande_WP_Navwalker')) {
     class Rasande_WP_Navwalker extends Walker_Nav_Menu
     {
