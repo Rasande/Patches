@@ -6,9 +6,7 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -33,7 +31,6 @@
 
 				endif; ?>
 
-
 				<!-- Desktop navigation -->
 				<nav class="navigation navigation--desktop">
 					<?php wp_nav_menu(array(
@@ -47,7 +44,6 @@
 					));
 					?>
 				</nav>
-
 
 				<!-- Site header toggles -->
 				<div class="controls">
