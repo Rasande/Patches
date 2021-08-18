@@ -1,11 +1,4 @@
-<?php
-
-/**
- * Card
- * 
- */
-
-defined('ABSPATH') || exit; ?>
+<?php defined('ABSPATH') || exit; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry card the-card'); ?>>
     <a href="<?php echo get_permalink(); ?>">

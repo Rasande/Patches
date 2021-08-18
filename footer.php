@@ -1,13 +1,6 @@
-<?php
+<?php defined('ABSPATH') || exit;
 
-/**
- * The template for displaying the footer. 
- *
- */
-
-defined('ABSPATH') || exit; ?>
-
-<?php if (class_exists('ACF')) {
+if (class_exists('ACF')) {
 	$footer = get_field('footer', 'option');
 } ?>
 

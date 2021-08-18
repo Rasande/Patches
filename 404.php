@@ -1,6 +1,4 @@
-<?php
-
-defined('ABSPATH') || exit;
+<?php defined('ABSPATH') || exit;
 
 get_header();
 

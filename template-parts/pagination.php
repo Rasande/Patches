@@ -1,11 +1,4 @@
-<?php
-
-/**
- * Pagination
- * 
- */
-
-defined('ABSPATH') || exit; ?>
+<?php defined('ABSPATH') || exit; ?>
 
 <?php if (show_pagination()) : ?>
     <div class="pagination">

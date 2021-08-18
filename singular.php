@@ -1,13 +1,6 @@
-<?php
+<?php defined('ABSPATH') || exit;
 
-/**
- * The template for single posts and pages
- * 
- */
-
-defined('ABSPATH') || exit; ?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 <!-- Site content -->
 <main id="main" class="site-main">

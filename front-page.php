@@ -1,13 +1,6 @@
-<?php
+<?php defined('ABSPATH') || exit;
 
-/**
- * The frontpage template file
- * 
- */
-
-defined('ABSPATH') || exit; ?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 <!-- Site content -->
 <main id="main" class="site-main">

@@ -1,11 +1,4 @@
-<?php
-
-/**
- * The template for displaying the header
- *
- */
-
-defined('ABSPATH') || exit; ?>
+<?php defined('ABSPATH') || exit; ?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

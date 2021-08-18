@@ -1,11 +1,4 @@
-<?php
-
-/**
- * Page header
- * 
- */
-
-defined('ABSPATH') || exit;
+<?php defined('ABSPATH') || exit;
 
 $customHeading = '';
 

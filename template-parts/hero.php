@@ -1,11 +1,4 @@
-<?php
-
-/**
- * Hero section for the frontpage
- * 
- */
-
-defined('ABSPATH') || exit;
+<?php defined('ABSPATH') || exit;
 
 $customHeading = '';
 
