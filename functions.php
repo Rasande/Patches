@@ -32,7 +32,6 @@ if (!function_exists('rasande_theme_setup')) {
 		add_editor_style('assets/css/editor.css');
 		// Add image sizes
 		add_image_size('card-thumbnail', 500, 320, array('center', 'center'));
-		add_image_size('page-header', 1020, 650, array('center', 'center'));
 		// Register menus
 		register_nav_menus(array(
 			'desktop' => __('Desktop Menu', 'rasande'),

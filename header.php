@@ -46,7 +46,7 @@
 				</nav>
 
 				<!-- Site header toggles -->
-				<div class="controls">
+				<div class="toggles">
 					<div class="site-header__search">
 
 						<div class="container-wide">
