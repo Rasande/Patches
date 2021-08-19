@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="main" class="site-main">
 
     <!-- Page header -->
-    <?php get_template_part('inc/parts/page-header'); ?>
+    <?php get_template_part('inc/parts/entry-header'); ?>
 
     <div class="container-wide">
         <div class="grid">

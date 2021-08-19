@@ -1,7 +1,7 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
 
-.page-header {
+.entry-header {
     padding: 10rem 0 $space-lg;
     // Title
     &__title {

@@ -52,7 +52,8 @@ Desktop navigation
         padding: $space-md $space-md;
     }
 
-    .nav__item:hover>.nav__item--link, .nav__item:hover>.submenu-btn {
+    .nav__item:hover > .nav__item--link,
+    .nav__item:hover > .submenu-btn {
         color: $color-primary !important;
     }
 
@@ -60,15 +61,15 @@ Desktop navigation
         padding: $space-sm $space-md;
     }
 
-    .nav__item.is-active>.nav__item--link {
+    .nav__item.is-active > .nav__item--link {
         color: $text-color-secondary;
     }
 
-    .nav__item.has-submenu>.nav__item--link {
+    .nav__item.has-submenu > .nav__item--link {
         padding-right: 0;
     }
 
-    .nav__item.has-submenu:hover>.submenu {
+    .nav__item.has-submenu:hover > .submenu {
         transform: translateY(0px);
         visibility: visible;
         opacity: 1;
@@ -87,9 +88,8 @@ Desktop navigation
     }
 
     .submenu .submenu-btn {
-
         i {
-            transform: rotate(-45deg)
+            transform: rotate(-45deg);
         }
     }
 
@@ -102,7 +102,7 @@ Desktop navigation
         background-color: $color-light;
         transform: translateY(-15px);
         opacity: 0;
-        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
         z-index: 999;
         &.is-open {
             visibility: visible;
@@ -132,7 +132,7 @@ Mobile navigation
     padding: $space-md $space-md $space-xl;
     background: $color-light;
     transform: translateX(100%);
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
 
     &.is-open {
         transform: translateX(0);
@@ -169,11 +169,11 @@ Mobile navigation
         outline-offset: -2px;
     }
 
-    .nav__item:hover>.nav__item--link {
+    .nav__item:hover > .nav__item--link {
         color: $color-primary !important;
     }
 
-    .nav__item.is-active>.nav__item--link {
+    .nav__item.is-active > .nav__item--link {
         color: $text-color-secondary;
     }
 
@@ -186,7 +186,7 @@ Mobile navigation
 
         i {
             transform: rotate(45deg);
-            transition: transform .25s ease;
+            transition: transform 0.25s ease;
         }
 
         &.is-open {
@@ -201,7 +201,7 @@ Mobile navigation
         margin-bottom: 0;
         z-index: 999;
         overflow: hidden;
-        transition: height .25s ease;
+        transition: height 0.25s ease;
     }
 
     .submenu.is-open {

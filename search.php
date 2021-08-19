@@ -6,9 +6,7 @@ get_header(); ?>
 <main id="main" class="site-main">
 
     <!-- Page header -->
-    <?php get_template_part('inc/parts/page-header'); ?>
-
-
+    <?php get_template_part('inc/parts/entry-header'); ?>
 
     <?php if (have_posts()) : ?>
         <div class="container-wide">
@@ -28,8 +26,6 @@ get_header(); ?>
             echo sprintf(__('No results found for "%s"', 'rasande'), $searchQuery); ?>
         </p>
     <?php endif; ?>
-
-
 
     <?php get_template_part('inc/parts/pagination'); ?>
 

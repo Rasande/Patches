@@ -139,7 +139,7 @@ msgstr "Temainställningar"
 msgid "Show submenu for %s"
 msgstr "Visa undermeny för %s"
 
-#: inc/parts/page-header.php:26
+#: inc/parts/entry-header.php:26
 msgid "Search Results For"
 msgstr "Sökresultat för"
 
