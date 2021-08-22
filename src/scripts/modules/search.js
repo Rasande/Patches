@@ -1,10 +1,10 @@
 class Search {
 
     constructor() {
-        this.searchModal = document.querySelector('.site-header__search')
-        this.searchButton = document.querySelector('.search__toggle')
-        this.searchField = document.querySelector('.search__input')
-        this.searchOverlay = document.querySelector('.overlay--search')
+        this.searchModal = document.querySelector('.modal-search')
+        this.searchButton = document.querySelector('.modal-search-toggle')
+        this.searchField = document.querySelector('.modal-search-input')
+        this.searchOverlay = document.querySelector('.modal-search-overlay')
         this.isSearchOpen = false
         this.events()
     }

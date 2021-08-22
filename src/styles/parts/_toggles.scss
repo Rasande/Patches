@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    .search__toggle {
+    .modal-search-toggle {
         transition: transform .25s ease;
         background-color: transparent;
 
@@ -14,11 +14,11 @@
         padding: $space-md;
 
         &.is-active {
-            transform: rotate(90deg);
+
         }
     }
 
-    .navigation__toggle {
+    .modal-navigation-toggle {
         @include mq($navbar-expand) {
             display: none;
         }

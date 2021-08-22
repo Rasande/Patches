@@ -34,21 +34,15 @@
 				<!-- Primary navigation-->
 				<?php get_template_part('inc/parts/primary-nav'); ?>
 
+
+
 				<!-- Toggles -->
 				<div class="toggles">
-					<div class="site-header__search">
 
-						<div class="container-wide">
-							<form action="<?php echo home_url('/'); ?>" method="get" role="search" class="search__form">
-								<input type="search" class="search__input" placeholder="<?php _e('Search...', 'rasande') ?>" value="<?php the_search_query(); ?>" name="s">
-							</form>
-						</div>
-
-					</div>
-					<button class="search__toggle btn-clean" aria-expanded="false"><i class="icon-search"></i></button>
+					<button class="modal-search-toggle btn-clean" aria-expanded="false"><i class="icon-search"></i></button>
 
 					<!-- Hamburger -->
-					<button data-toggle="modal" class="navigation__toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e('Toggle navigation', 'rasande'); ?>" aria-expanded="false">
+					<button data-toggle="modal" class="modal-navigation-toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e('Toggle navigation', 'rasande'); ?>" aria-expanded="false">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
@@ -57,6 +51,9 @@
 				</div>
 
 			</div>
+
+			<!-- Modal search -->
+			<?php get_template_part('inc/parts/modal-search'); ?>
 
 			<!-- Modal navigation -->
 			<?php get_template_part('inc/parts/modal-nav'); ?>

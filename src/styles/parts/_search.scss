@@ -1,7 +1,7 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
 
-.site-header__search {
+.modal-search {
     position: absolute;
     top: 100%;
     right: 0;
@@ -13,7 +13,7 @@
     background: $color-light;
     overflow: hidden;
 
-    .search__input {
+    .modal-search-input {
         width: 100%;
         padding: $space-sm;
         opacity: 0;
@@ -23,7 +23,7 @@
     &.is-open {
         transform: scaleY(1);
 
-        .search__input {
+        .modal-search-input {
             transition-delay: .4s;
             opacity: 1;
         }
