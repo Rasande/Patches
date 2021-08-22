@@ -13,6 +13,9 @@ get_header(); ?>
                 <!-- Page header -->
                 <?php get_template_part('inc/parts/entry-header'); ?>
 
+                <!-- Breadcrumbs -->
+                <?php get_template_part('inc/parts/breadcrumbs'); ?>
+                
                 <!-- Page content -->
                 <div class="block-content">
                     <?php the_content(); ?>

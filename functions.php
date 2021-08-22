@@ -308,16 +308,14 @@ if (!function_exists('rasande_admin_bar_css')) {
 }
 
 /* ---------------------------------------------------------------------------------------------------
-    Change curstom logo markup
+    Better custom logo attributes
 --------------------------------------------------------------------------------------------------- */
-if (!function_exists('rasande_change_logo_class')) {
-    function rasande_change_logo_class($html) {
-        $html = str_replace('class="custom-logo-link"', 'class="brand"', $html);
+if (!function_exists('rasande_logo_attr')) {
+    function rasande_logo_attr($html) {
         $html = str_replace('alt=""', 'title="Home" alt="logo"', $html);
-
         return $html;
     }
-    add_filter('get_custom_logo', 'rasande_change_logo_class');
+    add_filter('get_custom_logo', 'rasande_logo_attr');
 }
 
 /* ---------------------------------------------------------------------------------------------------
@@ -403,14 +401,6 @@ if (!function_exists('rasande_time_diff')) {
         $date = $posted >= strtotime('-2 weeks') ? human_time_diff($posted) . ' ' . __('ago', 'rasande') :  get_the_date();;
 
         return $date;
-    }
-}
-
-if (!function_exists('show_pagination')) {
-    function show_pagination() {
-        global $wp_query;
-
-        return ($wp_query->max_num_pages > 1);
     }
 }
 

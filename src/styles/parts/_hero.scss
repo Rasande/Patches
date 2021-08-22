@@ -3,8 +3,11 @@
 
 .hero {
     background-color: $color-primary;
+    background-position: center;
+    background-size: cover;
     color: $color-light;
     margin-bottom: $space-lg;
+
     &__inner {
         display: grid;
         height: 50vh;

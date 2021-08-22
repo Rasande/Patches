@@ -2,63 +2,31 @@
 @use '../abstracts/mixins'as *;
 
 .card {
-    margin-bottom: $space-lg;
-    border-radius: $border-radius;
-    background-color: $color-light;
+    position: relative;
 
-    &__thumbnail {
-        width: 100%;
-        max-width: none;
-
-        img {
-            border-radius: $border-radius $border-radius 0px 0px;
-
-            width: 100%;
-            max-width: none;
-            opacity: 1;
-            transition: opacity .25s ease;
-
-            &:hover {
-                opacity: .8;
-            }
-        }
-    }
-
-    &__content {
-        padding: $space-xs $space-sm $space-md;
-
-        &--title {
-
-
-            h2, h3, h4, h5 {
-                @include font-size($font-sizes-h4);
-                margin: 0;
-            }
-        }
-
-        .card__content--category {
-            padding: $space-xs 0;
-            color: $color-primary;
-            font-size: $font-size-sm;
-
-            a {
-                color: $text-color-secondary;
-            }
-
-        }
-
-        &--date {
-            text-transform: uppercase;
-            font-size: $font-size-sm;
-        }
-
-        &--read {
-            font-size: $font-size-sm;
-        }
-
+    &:focus-within,
+    &:hover {
     }
 
     a {
         text-decoration: none;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: $font-size-base;
+        text-align: center;
     }
 }

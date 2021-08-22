@@ -12,11 +12,14 @@ if ($customHeading) :
     $heading = $customHeading;
 else :
     $heading = get_the_title();
-endif; ?>
+endif; 
 
-?>
+if (class_exists('ACF')) {
+	$hero = get_field('hero');
+} ?>
 
-<div class="hero">
+
+<div class="hero" style="background-image:url('<?php echo $hero['bg_img']; ?>');">
     <div class="hero__inner">
     <div class="container-wide"></div>
         <h1 class="hero__title display"><?php echo $heading; ?></h1>

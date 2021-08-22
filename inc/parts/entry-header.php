@@ -33,6 +33,5 @@ endif; ?>
 <header class="entry-header">
     <div class="container">
         <h1 class="entry-header__title"><?php echo $heading; ?></h1>
-        <?php get_template_part('inc/parts/breadcrumbs'); ?>
     </div>
 </header>

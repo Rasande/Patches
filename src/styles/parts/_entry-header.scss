@@ -2,8 +2,10 @@
 @use '../abstracts/mixins'as *;
 
 .entry-header {
-    padding: 10rem 0 $space-lg;
-    // Title
+    padding: $space-xl 0 $space-lg;
+    margin-bottom: $space-md;
+    background-color: $color-secondary;
+
     &__title {
         color: $heading-color;
     }

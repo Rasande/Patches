@@ -12,8 +12,8 @@ if (class_exists('ACF')) {
 			// register a testimonial block.
 			acf_register_block_type(array(
 				'name'              => 'testimonial',
-				'title'             => __('Testimonial'),
-				'description'       => __('A custom testimonial block.'),
+				'title'             => __('Testimonial', 'rasande'),
+				'description'       => __('A custom testimonial block.', 'rasande'),
 				'render_template'   => 'template-parts/blocks/testimonial/testimonial.php',
 				'category'          => 'formatting',
 				'icon'              => 'admin-comments',

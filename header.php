@@ -18,12 +18,12 @@
 	<div class="site">
 		<!-- Site header -->
 		<header class="site-header is-fixed">
-			<div class="site-header__inner container-fluid">
+			<div class="site-header-inner container-fluid">
 
-				<!-- Site header brand -->
+				<!-- Logotype-->
 				<?php if (!has_custom_logo()) : ?>
 
-					<a class="brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
+					<a class="custom-logo-link" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
 
 				<?php else :
 
@@ -31,21 +31,10 @@
 
 				endif; ?>
 
-				<!-- Desktop navigation -->
-				<nav class="navigation navigation--desktop">
-					<?php wp_nav_menu(array(
-						'theme_location' => 'desktop',
-						'container' => '',
-						'menu_class' => 'nav__menu',
-						'menu_id' => 'menu-primary',
-						'walker' => new Rasande_WP_Navwalker(),
-						'fallback_cb' => '',
-						'depth' => '3'
-					));
-					?>
-				</nav>
+				<!-- Main menu-->
+				<?php get_template_part('inc/parts/nav'); ?>
 
-				<!-- Site header toggles -->
+				<!-- Toggles -->
 				<div class="toggles">
 					<div class="site-header__search">
 
@@ -69,18 +58,7 @@
 
 			</div>
 
-			<!-- Site header mobile navigation -->
-			<nav data-name="mobile" class="navigation--mobile">
-				<?php wp_nav_menu(array(
-					'theme_location' => 'mobile',
-					'container' => '',
-					'menu_class' => 'nav__menu',
-					'menu_id' => 'menu-mobile',
-					'walker' => new Rasande_WP_Navwalker(),
-					'fallback_cb' => '',
-					'depth' => '3'
-				));
-				?>
-			</nav>
+			<!-- Modal menu -->
+			<?php get_template_part('inc/parts/modal-nav'); ?>
 
 		</header>

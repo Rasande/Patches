@@ -8,6 +8,7 @@ class MobileMenu {
         this.submenuBtn = document.querySelectorAll('.submenu-btn')
         this.isMenuOpen = false
         this.events()
+        this.mainPadding()
     }
 
     events() {
@@ -25,6 +26,7 @@ class MobileMenu {
         })
         document.addEventListener('keydown', e => this.keyPress(e))
         window.addEventListener('scroll', () => this.changeHeader())
+        window.addEventListener('resize', () =>this.mainPadding())
     }
 
     triggerMenu(e) {
@@ -61,7 +63,6 @@ class MobileMenu {
         menuBtn.setAttribute('aria-expanded', 'true')
 
         this.isMenuOpen = true
-
     }
 
     closeMenu(menu) {
@@ -140,6 +141,14 @@ class MobileMenu {
         } else {
             this.header.classList.remove('is-scrolled')
         }
+    }
+
+    mainPadding() {
+        const main = document.querySelector('.site-main')
+        const header = document.querySelector('.site-header')
+        const headerHeight = header.offsetHeight
+
+        main.style.paddingTop = headerHeight + 'px';
     }
 
 }
