@@ -31,8 +31,8 @@
 
 				endif; ?>
 
-				<!-- Main menu-->
-				<?php get_template_part('inc/parts/nav'); ?>
+				<!-- Primary navigation-->
+				<?php get_template_part('inc/parts/primary-nav'); ?>
 
 				<!-- Toggles -->
 				<div class="toggles">
@@ -48,7 +48,7 @@
 					<button class="search__toggle btn-clean" aria-expanded="false"><i class="icon-search"></i></button>
 
 					<!-- Hamburger -->
-					<button data-toggle="mobile" class="navigation__toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e('Toggle navigation', 'rasande'); ?>" aria-expanded="false">
+					<button data-toggle="modal" class="navigation__toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e('Toggle navigation', 'rasande'); ?>" aria-expanded="false">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
@@ -58,7 +58,7 @@
 
 			</div>
 
-			<!-- Modal menu -->
+			<!-- Modal navigation -->
 			<?php get_template_part('inc/parts/modal-nav'); ?>
 
 		</header>

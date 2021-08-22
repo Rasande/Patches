@@ -29,8 +29,8 @@ if (!class_exists('Rasande_WP_Navwalker')) {
 
             // Item classes
             $item_classes = array(
-                'item'                      => $depth == 0 ? $item_class = 'nav__item' . " " . 'menu-item-' . $item->ID : '',
-                'depth_class'               => $depth >= 1 ? $item_class = 'nav__item' . " " . 'menu-item-' . $item->ID : '',
+                'item'                      => $depth == 0 ? $item_class = 'nav-item' . " " . 'menu-item-' . $item->ID : '',
+                'depth_class'               => $depth >= 1 ? $item_class = 'nav-item' . " " . 'menu-item-' . $item->ID : '',
                 'parent_class'              => $args->has_children ? $parent_class = 'has-submenu' : '',
                 'active_class'              => in_array("current-menu-item", $item->classes) ? 'is-active' : '',
                 'active_parent_class'       => in_array("current-menu-parent", $item->classes) ? '' : '',
@@ -56,9 +56,9 @@ if (!class_exists('Rasande_WP_Navwalker')) {
               $labelName = sprintf(__('Show submenu for %s', 'rasande'), $title);
 
             if($permalink === '#' && in_array("has-submenu",$item_classes   )) {
-                $link_output_pre = '<a class="nav__item--link has-no-link" href="' . $permalink . '" aria-label="' . $labelName . '" aria-expanded="false" aria-haspopup="true">';
+                $link_output_pre = '<a class="nav-item-link has-no-link" href="' . $permalink . '" aria-label="' . $labelName . '" aria-expanded="false" aria-haspopup="true">';
             } else {
-                $link_output_pre = '<a class="nav__item--link" href="' . $permalink . '"' . $attributes . '>';
+                $link_output_pre = '<a class="nav-item-link" href="' . $permalink . '"' . $attributes . '>';
             }
             
             $link_output_end = '</a>';

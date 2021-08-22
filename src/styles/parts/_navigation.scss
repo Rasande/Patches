@@ -4,49 +4,54 @@
 /* ---------------------------------------------------------------------------------------------------
     Main navigation
 --------------------------------------------------------------------------------------------------- */
-.navigation--desktop {
-    align-items: center;
+.primary-navigation {
 
-    .nav__menu {
+    // When to display
+    display: none;
+    @include mq($navbar-expand) {
+        display: flex;
+    }
+
+    .nav {
         display: flex;
         align-items: center;
     }
 
-    .nav__item {
+    .nav-item {
         position: relative;
         display: flex;
         margin-left: $space-sm;
     }
 
-    .nav__item .nav__item {
+    .nav-item .nav-item {
         min-width: 200px;
         margin: 0;
     }
 
-    .nav__item .nav__item--link {
+    .nav-item .nav-item-link {
         display: block;
         width: 100%;
         padding: $space-md $space-md;
     }
 
-    .nav__item:hover > .nav__item--link,
-    .nav__item:hover > .submenu-btn {
+    .nav-item:hover > .nav-item-link,
+    .nav-item:hover > .submenu-btn {
         color: $color-primary !important;
     }
 
-    .nav__item .nav__item .nav__item--link {
+    .nav-item .nav-item .nav-item-link {
         padding: $space-sm $space-md;
     }
 
-    .nav__item.is-active > .nav__item--link {
+    .nav-item.is-active > .nav-item-link {
         color: $text-color-secondary;
     }
 
-    .nav__item.has-submenu > .nav__item--link {
+    .nav-item.has-submenu > .nav-item-link {
         padding-right: 0;
     }
 
-    .nav__item.has-submenu:hover > .submenu {
+    .nav-item.has-submenu:hover > .submenu {
         transform: translateY(0px);
         visibility: visible;
         opacity: 1;

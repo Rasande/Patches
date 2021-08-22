@@ -33,8 +33,8 @@ if (!function_exists('rasande_theme_setup')) {
         add_image_size('card-thumbnail', 500, 320, array('center', 'center'));
         // Register menus
         register_nav_menus(array(
-            'desktop' => __('Desktop Menu', 'rasande'),
-            'mobile' => __('Mobile Menu', 'rasande')
+            'primary' => __('Primary Menu', 'rasande'),
+            'modal' => __('Modal Menu', 'rasande')
         ));
         // Add HTML5 Support
         add_theme_support('html5', array(

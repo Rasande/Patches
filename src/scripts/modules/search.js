@@ -32,9 +32,7 @@ class Search {
     }
 
     openModal() {
-
         this.searchModal.classList.add('is-open')
-
         this.searchField.value = ''
         setTimeout(() => this.searchField.focus(), 301)
         this.searchButton.classList.add('is-active')

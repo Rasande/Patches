@@ -4,7 +4,13 @@
 /* ---------------------------------------------------------------------------------------------------
     Navigation modal
 --------------------------------------------------------------------------------------------------- */
-.navigation--mobile {
+.modal-navigation {
+
+    // When to hide
+    @include mq($navbar-expand) {
+        display: none;
+    }
+
     position: absolute;
     right: 0;
     width: 100%;
@@ -26,21 +32,21 @@
         width: 25%;
     }
 
-    .nav__item {
+    .nav-item {
         position: relative;
         display: flex;
         flex-wrap: wrap;
         color: $color-dark;
     }
 
-    .nav__item .nav__item {
+    .nav-item .nav-item {
         position: relative;
         display: flex;
         flex-wrap: wrap;
         padding-left: $space-md;
     }
 
-    .nav__item .nav__item--link {
+    .nav-item .nav-item-link {
         flex: 1;
         display: block;
         width: 100%;
@@ -49,11 +55,11 @@
         outline-offset: -2px;
     }
 
-    .nav__item:hover > .nav__item--link {
+    .nav-item:hover > .nav-item-link {
         color: $color-primary !important;
     }
 
-    .nav__item.is-active > .nav__item--link {
+    .nav-item.is-active > .nav-item-link {
         color: $text-color-secondary;
     }
 

@@ -1,6 +1,6 @@
 import Utility from "./utility"
 
-class MobileMenu {
+class ModalMenu {
     constructor() {
         this.header = document.querySelector('.site-header')
         this.toggleMenu = document.querySelectorAll('[data-toggle]')
@@ -152,4 +152,4 @@ class MobileMenu {
     }
 
 }
-export default MobileMenu
+export default ModalMenu

@@ -52,26 +52,3 @@
   .skip-to-content-link:focus {
     transform: translateY(0%);
   }
-
-
-  /* ---------------------------------------------------------------------------------------------------
-      Navigation Display
-  --------------------------------------------------------------------------------------------------- */
-  .navigation {
-
-    &--desktop {
-        display: none;
-
-        @include mq($navbar-expand) {
-            display: flex;
-        }
-    }
-
-    &--mobile {
-        display: block;
-
-        @include mq($navbar-expand) {
-            display: none;
-        }
-    }
-}

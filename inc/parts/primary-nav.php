@@ -1,10 +1,10 @@
 <?php defined('ABSPATH') || exit; ?>
 
-<nav class="navigation navigation--desktop">
+<nav class="navigation primary-navigation">
     <?php wp_nav_menu(array(
-        'theme_location' => 'desktop',
+        'theme_location' => 'primary',
         'container' => '',
-        'menu_class' => 'nav__menu',
+        'menu_class' => 'nav',
         'menu_id' => 'menu-primary',
         'walker' => new Rasande_WP_Navwalker(),
         'fallback_cb' => '',
