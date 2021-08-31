@@ -1,8 +1,8 @@
 <?php defined('ABSPATH') || exit;
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
 	Register ACF blocks
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (class_exists('ACF')) {
 	function my_acf_init_block_types()
 	{
@@ -11,22 +11,28 @@ if (class_exists('ACF')) {
 
 			// register a testimonial block.
 			acf_register_block_type(array(
-				'name'              => 'testimonial',
-				'title'             => __('Testimonial', 'rasande'),
-				'description'       => __('A custom testimonial block.', 'rasande'),
-				'render_template'   => 'template-parts/blocks/testimonial/testimonial.php',
-				'category'          => 'formatting',
-				'icon'              => 'admin-comments',
-				'keywords'          => array('testimonial', 'quote'),
+				'name'              => 'image-column',
+				'title'             => __('Image Column', 'rasande'),
+				'description'       => __('A custom two column block with image.', 'rasande'),
+				'render_template'   => 'inc/blocks/image-column.php',
+				'category'          => 'custom',
+				'icon'              => 'cover-image',
+				'keywords'          => array('custom', 'image', 'column', 'columns'),
+				'supports'          => array(
+					'align' => true,
+					'mode' => true,
+					'jsx' => true
+				),
 			));
 		}
 	}
 	add_action('acf/init', 'my_acf_init_block_types');
 }
 
-/* ---------------------------------------------------------------------------------------------------
-		Register ACF options page
---------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------
+	Register ACF options page
+------------------------------------------------- */
 if (class_exists('ACF')) {
 	acf_add_options_page(array(
 		'page_title' 	=> __('Theme settings', 'rasande'),
@@ -38,9 +44,9 @@ if (class_exists('ACF')) {
 	));
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
 	ACF Json save and load folders
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (class_exists('ACF')) {
 	// Save point
 	function acf_json_save_point($path)

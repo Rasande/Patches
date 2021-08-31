@@ -1,0 +1,13 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.entry-header {
+    padding: $space-xxl 0;
+    margin-bottom: $space-md;
+    background-color: $secondary-color;
+
+    .entry-header-title {
+        margin: 1rem 0;
+        color: $light-color;
+    }
+}

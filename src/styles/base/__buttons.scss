@@ -1,0 +1,96 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.button,
+.faux-button,
+.wp-block-button__link,
+:root .wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+:root .woocommerce #respond input#submit,
+:root .woocommerce a.button,
+:root .woocommerce button.button,
+:root .woocommerce input.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: $accent-color;
+    border: none;
+    border-radius: 0;
+    color: $body-text-color;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin: 0;
+    padding: 1.5rem 2.4rem;
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 0.1rem;
+}
+
+button:hover,
+.button:hover,
+.faux-button:hover,
+.wp-block-button__link:hover,
+:root .wp-block-file__button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+:root .woocommerce #respond input#submit:hover,
+:root .woocommerce a.button:hover,
+:root .woocommerce button.button:hover,
+:root .woocommerce input.button:hover,
+button:focus,
+.button:focus,
+.faux-button:focus,
+.wp-block-button__link:focus,
+:root .wp-block-file__button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+:root .woocommerce #respond input#submit:focus,
+:root .woocommerce a.button:focus,
+:root .woocommerce button.button:focus,
+:root .woocommerce input.button:focus {
+    text-decoration: underline;
+}
+
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:visited {
+    color: $body-text-color;
+}
+
+.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+    border: 0.2rem solid currentColor;
+    padding: 1.3rem 2.2rem;
+}
+
+.is-style-outline .wp-block-button__link:not(.has-text-color),
+.wp-block-button__link.is-style-outline:not(.has-text-color) {
+    border-color: $accent-color;
+    color: $accent-color;
+}
+
+button.reset,
+input.reset,
+textarea.reset {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    padding: 0;
+    text-transform: none;
+}

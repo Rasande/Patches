@@ -1,0 +1,14 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.entry-content > *:not(.alignfull) {
+	width: 100%;
+	max-width: $container;
+	margin: $grid-gutter auto;
+	padding: 0 $grid-margin;
+}
+
+.entry-content > *:not(.alignfull).alignwide {
+	max-width: $container-wide;
+	margin: $grid-margin auto;
+}

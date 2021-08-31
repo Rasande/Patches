@@ -7,7 +7,7 @@ if (class_exists('ACF')) {
 } ?>
 
 <!-- Site content -->
-<main id="main" class="site-main">
+<main id="site-content" rolse="main">
 
     <div class="page-404">
         <div class="container">
@@ -19,7 +19,7 @@ if (class_exists('ACF')) {
                     <?php _e("The page cannot be found", "rasande") ?>
                 <?php endif; ?>
             </p>
-            <p><a href="<?php echo get_home_url(); ?>" class="btn btn-primary"><?php _e('Back to homepage', 'rasande') ?></a></p>
+            <p><a href="<?php echo get_home_url(); ?>" class="wp-block-button__link"><?php _e('Back to homepage', 'rasande') ?></a></p>
         </div>
     </div>
 

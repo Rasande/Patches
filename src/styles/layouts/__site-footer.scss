@@ -1,0 +1,39 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.site-footer {
+    margin-top: $space-xl;
+    padding: $space-xl 0 $space-lg;
+    color: $light-color;
+    background-color: $primary-color;
+
+    a {
+        color: $secondary-color;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 0;
+        font-size: $base-font-size;
+    }
+
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .copyright {
+        padding: $space-lg 0 0 0;
+        color: $body-text-color-secondary;
+        font-size: $small-font-size;
+        text-align: center;
+    }
+}

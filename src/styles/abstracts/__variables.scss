@@ -1,0 +1,86 @@
+/* -------------------------------------------------
+    Typography
+------------------------------------------------- */
+$body-font: "Open sans", sans-serif;
+$headings-font: "Archivo", sans-serif;
+
+$base-font-size: 1.8rem;
+$small-font-size: 1.4rem;
+
+$h1-font-sizes: (
+    null: 2.4rem,
+    sm: 2.8rem,
+    md: 3.2rem,
+);
+$h2-font-sizes: (
+    null: 2.1rem,
+    sm: 2.4rem,
+    md: 2.8rem,
+);
+$h3-font-sizes: (
+    null: 2rem,
+    sm: 2.1rem,
+    md: 2.4rem,
+);
+$h4-font-sizes: (
+    null: 1.9rem,
+    sm: 2rem,
+    md: 2.1rem,
+);
+$h5-font-sizes: (
+    null: 1.9rem,
+);
+$h6-font-sizes: (
+    null: 1em,
+);
+
+/* -------------------------------------------------
+    Colors
+------------------------------------------------- */
+$primary-color: #3858e9;
+$secondary-color: #33f078;
+$accent-color: #ff7b00;
+$dark-color: #2c3338;
+$light-color: #ffffff;
+
+$body-bg-color: #f0f0f1;
+$body-text-color: $dark-color;
+$body-text-color-secondary: #bcbcbc;
+$border-color: #2b2b2b;
+$success-color: #6cbd7f;
+$warning-color: #ffc107;
+$error-color: #dc3545;
+
+$theme-colors: (primary, $primary-color), (secondary, $secondary-color), (accent, $accent-color), (dark, $dark-color), (light, $light-color);
+
+/* -------------------------------------------------
+    Layout
+------------------------------------------------- */
+$breakpoints: (
+    xs: 576px,
+    sm: 680px,
+    md: 960px,
+    lg: 1680px,
+    xl: 1920px,
+);
+
+$container: map-get($breakpoints, "sm");
+$container-wide: map-get($breakpoints, "md");
+$container-lg: map-get($breakpoints, "lg");
+
+$grid-gutter: 3.6rem;
+$grid-margin: $grid-gutter / 2;
+
+$space-unit: 1.25rem;
+
+$space-xs: $space-unit * 0.25;
+$space-sm: $space-unit * 0.75;
+$space-md: $space-unit * 1.25;
+$space-lg: $space-unit * 2;
+$space-xl: $space-unit * 3.25;
+$space-xxl: $space-unit * 5.25;
+
+/* -------------------------------------------------
+    Navigation
+------------------------------------------------- */
+$navbar-expand: md;

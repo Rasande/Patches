@@ -1,13 +1,13 @@
 <?php defined('ABSPATH') || exit;
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Variables
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 $odd_or_even = 'odd';
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Theme setup
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_theme_setup')) {
     function rasande_theme_setup() {
         // Setup for translation
@@ -113,9 +113,9 @@ if (!function_exists('rasande_theme_setup')) {
     add_action('after_setup_theme', 'rasande_theme_setup');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Widget areas
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_widgets_init')) {
     function rasande_widgets_init() {
         register_sidebar(array(
@@ -146,9 +146,9 @@ if (!function_exists('rasande_widgets_init')) {
     add_action('widgets_init', 'rasande_widgets_init');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Enqueue styles & scripts
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_enqueue')) {
     function rasande_enqueue() {
         $theme_version = wp_get_theme()->get('Version');
@@ -165,9 +165,9 @@ if (!function_exists('rasande_enqueue')) {
     add_action('wp_enqueue_scripts', 'rasande_enqueue');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Clean up head section
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_cleanup')) {
     function rasande_cleanup() {
         // Remove extra links
@@ -195,9 +195,9 @@ if (!function_exists('rasande_cleanup')) {
     add_action('after_setup_theme', 'rasande_cleanup');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Disable comments
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 add_action('admin_init', function () {
     // Redirect any user trying to access comments page
     global $pagenow;
@@ -238,9 +238,9 @@ add_action('init', function () {
     }
 });
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Remove archive title prefix
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_archive_titles')) {
     function rasande_archive_titles($title) {
         if (is_category()) {
@@ -261,9 +261,9 @@ if (!function_exists('rasande_archive_titles')) {
     add_filter('get_the_archive_title', 'rasande_archive_titles');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Change archive post order
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_archive_order')) {
     function rasande_archive_order($query) {
         if (is_archive()) :
@@ -274,16 +274,16 @@ if (!function_exists('rasande_archive_order')) {
     add_action('pre_get_posts', 'rasande_archive_order');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Rewrite pagination slug to swedish
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 add_action('init', function () {
     $GLOBALS['wp_rewrite']->pagination_base = 'sida';
 });
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Admin CSS
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_admin_bar_css')) {
     function rasande_admin_bar_css() {
         if (is_admin_bar_showing()) : ?>
@@ -307,9 +307,9 @@ if (!function_exists('rasande_admin_bar_css')) {
     add_action('wp_head', 'rasande_admin_bar_css');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Better custom logo attributes
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_logo_attr')) {
     function rasande_logo_attr($html) {
         $html = str_replace('alt=""', 'title="Home" alt="logo"', $html);
@@ -318,9 +318,9 @@ if (!function_exists('rasande_logo_attr')) {
     add_filter('get_custom_logo', 'rasande_logo_attr');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Fix SVG size attribute problem
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_svg_attr')) {
     function rasande_svg_attr($out, $id) {
         $image_url  = wp_get_attachment_url($id);
@@ -333,20 +333,20 @@ if (!function_exists('rasande_svg_attr')) {
     add_filter('image_downsize', 'rasande_svg_attr', 10, 2);
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Change pagination markup
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_pagination_attr')) {
     function rasande_pagination_attr() {
-        return 'class="pagination__link"';
+        return 'class="wp-block-button__link"';
     }
     add_filter('next_posts_link_attributes', 'rasande_pagination_attr');
     add_filter('previous_posts_link_attributes', 'rasande_pagination_attr');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     HTML-block wrapper div
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_wrap_html_block')) {
     function rasande_wrap_html_block($block_content, $block) {
         if ('core/html' === $block['blockName']) {
@@ -357,9 +357,27 @@ if (!function_exists('rasande_wrap_html_block')) {
     add_filter('render_block', 'rasande_wrap_html_block', 10, 2);
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
+    Custom block category
+------------------------------------------------- */
+if (!function_exists('rasande_custom_block_category')) {
+    function rasande_custom_block_category($categories) {
+        return array_merge(
+            $categories,
+            [
+                [
+                    'slug'  => 'custom',
+                    'title' => __('Custom Blocks', 'rasande'),
+                ],
+            ]
+        );
+    }
+    add_action('block_categories', 'rasande_custom_block_category', 10, 2);
+}
+
+/* -------------------------------------------------
     Excerpt settings
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 // Excerpt length
 if (!function_exists('rasande_excerpt_length')) {
     function rasande_excerpt_length($length) {
@@ -376,9 +394,9 @@ if (!function_exists('rasande_excerpt_more')) {
     add_filter('excerpt_more', 'rasande_excerpt_more');
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Return read time
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_read_time')) {
     function rasande_read_time() {
         $postID = get_the_ID();
@@ -392,9 +410,9 @@ if (!function_exists('rasande_read_time')) {
     }
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Return time sience posted
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 if (!function_exists('rasande_time_diff')) {
     function rasande_time_diff() {
         $posted = get_post_time();
@@ -404,9 +422,9 @@ if (!function_exists('rasande_time_diff')) {
     }
 }
 
-/* ---------------------------------------------------------------------------------------------------
+/* -------------------------------------------------
     Include files from /inc
---------------------------------------------------------------------------------------------------- */
+------------------------------------------------- */
 $rasande_includes = array(
     'acf',
     'classes',

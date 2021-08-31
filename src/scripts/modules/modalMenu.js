@@ -136,6 +136,7 @@ class ModalMenu {
 
     changeHeader() {
         let scrollPos = window.scrollY
+        
         if (scrollPos >= 75 || this.isMenuOpen) {
             this.header.classList.add('is-scrolled')
         } else {
@@ -144,11 +145,13 @@ class ModalMenu {
     }
 
     mainPadding() {
-        const main = document.querySelector('.site-main')
-        const header = document.querySelector('.site-header')
-        const headerHeight = header.offsetHeight
+        const main = document.querySelector('#site-content')
+        const header = document.querySelector('.site-header.is-fixed')
 
-        main.style.paddingTop = headerHeight + 'px';
+        if (header) {
+            const headerHeight = header.offsetHeight
+            main.style.paddingTop = headerHeight + 'px';
+        }
     }
 
 }

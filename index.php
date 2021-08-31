@@ -3,13 +3,13 @@
 get_header(); ?>
 
 <!-- Site content -->
-<main id="main" class="site-main">
+<main id="site-content" rolse="main">
 
     <!-- Page header -->
     <?php get_template_part('inc/parts/entry-header'); ?>
 
     <!-- Breadcrumbs -->
-                <?php get_template_part('inc/parts/breadcrumbs'); ?>
+    <?php get_template_part('inc/parts/breadcrumbs'); ?>
 
     <div class="container-wide">
         <div class="grid">

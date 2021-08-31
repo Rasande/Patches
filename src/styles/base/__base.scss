@@ -1,0 +1,367 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+/* -------------------------------------------------
+    Document setup
+------------------------------------------------- */
+:root {
+    @each $name, $color in $theme-colors {
+        --#{$name}: #{$color};
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: $body-text-color;
+    font-size: $base-font-size;
+    font-family: $body-font;
+    background-color: $body-bg-color;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    letter-spacing: -0.01em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.175em;
+    word-break: break-word;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+::selection {
+    color: $body-bg-color;
+    background: $body-text-color;
+}
+
+#site {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#site-content {
+    overflow: hidden;
+}
+
+/* -------------------------------------------------
+    Typography
+------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: $grid-gutter 0 calc(#{$grid-gutter} / 2);
+    font-family: $headings-font;
+    font-weight: 400;
+    font-feature-settings: "lnum";
+    font-variant-numeric: lining-nums;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+h1,
+.h1 {
+    @include font-size($h1-font-sizes);
+}
+
+h2,
+.h2 {
+    @include font-size($h2-font-sizes);
+}
+
+h3,
+.h3 {
+    @include font-size($h3-font-sizes);
+}
+
+h4,
+.h4 {
+    @include font-size($h4-font-sizes);
+}
+
+h5,
+.h5 {
+    @include font-size($h5-font-sizes);
+}
+
+h6,
+.h6 {
+    @include font-size($h6-font-sizes);
+}
+
+p {
+    margin: 0 0 1em 0;
+    line-height: 1.5;
+}
+
+p:empty {
+    margin: 0;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+b,
+strong,
+.bold {
+    font-weight: bold;
+}
+
+abbr,
+acronym {
+    cursor: help;
+}
+
+hr {
+}
+
+a {
+    color: $accent-color;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+cite {
+    font-size: $small-font-size;
+    color: $body-text-color-secondary;
+}
+
+hr {
+    width: 50%;
+    max-width: 40rem;
+    border-top: 1px solid $primary-color;
+    margin: $grid-gutter auto;
+}
+
+/* -------------------------------------------------
+    Lists
+------------------------------------------------- */
+ul,
+ol {
+    margin: 2.4rem 0 2.4rem 2.4rem;
+    list-style-position: inside;
+}
+
+li {
+    line-height: 1.5;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+dt,
+dd {
+    line-height: 1.5;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dt + dd {
+    margin-top: 0.5rem;
+}
+dd + dt {
+    margin-top: 1.5rem;
+}
+
+/* -------------------------------------------------
+    Quotes
+------------------------------------------------- */
+blockquote {
+    border-color: $accent-color;
+    border-style: solid;
+    border-width: 0 0 0 0.2rem;
+    color: inherit;
+    font-size: 1em;
+    margin: 4rem 0;
+    padding: 0 0 0 2rem;
+
+    &:before,
+    &:after {
+        content: "";
+    }
+}
+
+cite {
+    color: $accent-color;
+    font-size: $small-font-size;
+    font-style: normal;
+    font-weight: 700;
+}
+
+blockquote cite {
+    display: block;
+    margin: 2rem 0 0 0;
+}
+
+blockquote p:last-of-type {
+    margin: 0;
+}
+
+/* -------------------------------------------------
+    Code
+------------------------------------------------- */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace;
+    font-size: 1em;
+    padding: 0.4rem 0.6rem;
+}
+
+code,
+kbd,
+samp {
+    background: $light-color;
+    border-radius: 0.2rem;
+}
+
+pre {
+    border: 0.1rem solid $border-color;
+    line-height: 1.5;
+    margin: 4rem 0;
+    overflow: auto;
+    padding: 2.4rem;
+    text-align: left;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+}
+
+/* -------------------------------------------------
+    Media
+------------------------------------------------- */
+figure {
+    margin: 0;
+}
+
+iframe {
+    border: none;
+    display: block;
+    max-width: 100%;
+}
+
+img,
+embed,
+object {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+svg {
+    display: block;
+}
+
+figcaption,
+.wp-caption-text {
+    color: $body-text-color-secondary;
+    display: block;
+    font-size: $small-font-size;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1.2rem;
+}
+
+figcaption a {
+    color: inherit;
+}
+
+/* -------------------------------------------------
+    Tables
+------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: 1.6rem;
+    margin: 4rem auto;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+caption,
+thead,
+th,
+td,
+tfoot {
+    border-color: $border-color;
+}
+
+th,
+td,
+caption {
+    padding: 1.2rem;
+}
+
+th,
+td {
+    border: 0.1rem solid $border-color;
+    line-height: 1.4;
+    margin: 0;
+    overflow: visible;
+}
+
+th {
+    font-weight: 700;
+}
+
+caption {
+    background-color: $border-color;
+    font-weight: 700;
+    text-align: center;
+}
+
+thead {
+    border-bottom: 0.2rem solid $border-color;
+    white-space: nowrap;
+}
+
+tfoot {
+    border-top: 0.2rem solid $border-color;
+    font-style: italic;
+}

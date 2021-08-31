@@ -1,0 +1,11 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.pagination {
+    display: flex;
+    padding: $space-md 0;
+
+    &-next {
+        margin-left: auto;
+    }
+}

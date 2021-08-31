@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <!-- Site content -->
-<main id="main" class="site-main">
+<main id="site-content" rolse="main">
 
     <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
                 <?php get_template_part('inc/parts/breadcrumbs'); ?>
                 
                 <!-- Page content -->
-                <div class="block-content">
+                <div class="entry-content">
                     <?php the_content(); ?>
                 </div>
 

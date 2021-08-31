@@ -32,6 +32,6 @@ endif; ?>
 
 <header class="entry-header">
     <div class="container">
-        <h1 class="entry-header__title"><?php echo $heading; ?></h1>
+        <h1 class="entry-header-title"><?php echo $heading; ?></h1>
     </div>
 </header>

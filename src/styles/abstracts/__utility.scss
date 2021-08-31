@@ -1,0 +1,48 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+
+.center-vertically {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.center,
+.center-h {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center,
+.center-v {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.no-scrollbars {
+    scrollbar-width: none;
+}
+.no-scrollbars::-webkit-scrollbar {
+    display: none;
+}

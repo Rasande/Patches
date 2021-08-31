@@ -1,0 +1,165 @@
+@use '../abstracts/_variables' as *;
+@use '../abstracts/_mixins' as *;
+
+.site-header {
+    color: $dark-color;
+    background-color: $light-color;
+
+    .site-header-inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &.is-fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 888;
+    }
+
+    &.is-scrolled {
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------
+    Custom logotype
+--------------------------------------------------------------------------------------------------- */
+.custom-logo-link {
+    display: block;
+    padding: $space-sm $space-sm $space-sm 0;
+    margin: 0 auto 0 0;
+    color: $dark-color;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.custom-logo {
+    max-width: 80px;
+
+    @include mq(md) {
+        max-width: 130px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------
+    Toggles
+--------------------------------------------------------------------------------------------------- */
+.toggles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-search-toggle {
+        transition: transform 0.25s ease;
+        background-color: transparent;
+
+        width: 30px;
+        padding: $space-md;
+
+        &.is-active {
+        }
+    }
+
+    .modal-navigation-toggle {
+        @include mq($navbar-expand) {
+            display: none;
+        }
+    }
+}
+
+$hamburger-padding-x: 15px !default;
+$hamburger-padding-y: 15px !default;
+$hamburger-layer-width: 30px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-color: #000 !default;
+$hamburger-hover-opacity: 0.7 !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+.hamburger {
+    padding: $space-sm;
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.15s linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: 0;
+
+    &:hover {
+    }
+
+    &.is-active {
+        .hamburger-inner {
+            transform: rotate(45deg);
+            transition-delay: 0.12s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        }
+    }
+
+    .hamburger-box {
+        width: $hamburger-layer-width;
+        height: 25px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: $hamburger-layer-height / -2;
+        transition-duration: 0.075s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+        &,
+        &::before,
+        &::after {
+            width: $hamburger-layer-width;
+            height: $hamburger-layer-height;
+            background-color: $hamburger-layer-color;
+            position: absolute;
+            transition-property: transform;
+            transition-duration: 0.15s;
+            transition-timing-function: ease;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+        }
+
+        &::before {
+            top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+            transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+        }
+
+        &::after {
+            bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+            transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+    }
+}

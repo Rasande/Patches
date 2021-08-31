@@ -1,10 +1,7 @@
-@forward 'brand';
-@forward 'breadcrumbs';
-@forward 'card';
-@forward 'toggles';
-@forward 'hero';
-@forward 'navigation';
-@forward 'navigation-modal';
-@forward 'entry-header';
-@forward 'pagination';
-@forward 'search';
+@forward '_breadcrumbs';
+@forward '_card';
+@forward '_entry-header';
+@forward '_modal-nav';
+@forward '_modal-search';
+@forward '_pagination';
+@forward '_primary-nav';
