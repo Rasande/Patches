@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <!-- Site content -->
-<main id="site-content" rolse="main">
+<main id="site-content">
 
     <!-- Hero -->
     <?php
@@ -32,20 +32,15 @@ get_header(); ?>
         </div>
     </div>
 
+    <?php if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
 
-    <div class="container-wide">
+            <div class="entry-content">
+                <?php the_content(); ?>
+            </div>
 
-        <?php if (have_posts()) :
-            while (have_posts()) : the_post(); ?>
-
-                <div class="entry-content">
-                    <?php the_content(); ?>
-                </div>
-
-            <?php endwhile; ?>
-        <?php endif; ?>
-
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 
 </main>
 

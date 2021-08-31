@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <!-- Site content -->
-<main id="site-content" role="main">
+<main id="site-content">
 
     <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>

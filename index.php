@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <!-- Site content -->
-<main id="site-content" rolse="main">
+<main id="site-content">
 
     <!-- Page header -->
     <?php get_template_part('inc/parts/entry-header'); ?>

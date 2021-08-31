@@ -7,7 +7,7 @@ if (class_exists('ACF')) {
 } ?>
 
 <!-- Site content -->
-<main id="site-content" rolse="main">
+<main id="site-content">
 
     <div class="page-404">
         <div class="container">
