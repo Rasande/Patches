@@ -3,20 +3,17 @@
 get_header(); ?>
 
 <!-- Site content -->
-<main id="site-content" rolse="main">
+<main id="site-content" role="main">
 
     <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                <!-- Page header -->
+                <!-- Entry header -->
                 <?php get_template_part('inc/parts/entry-header'); ?>
 
-                <!-- Breadcrumbs -->
-                <?php get_template_part('inc/parts/breadcrumbs'); ?>
-                
-                <!-- Page content -->
+                <!-- Entry content -->
                 <div class="entry-content">
                     <?php the_content(); ?>
                 </div>

@@ -35,3 +35,11 @@ endif; ?>
         <h1 class="entry-header-title"><?php echo $heading; ?></h1>
     </div>
 </header>
+
+<?php if (function_exists('yoast_breadcrumb')) : ?>
+    <div class="breadcrumbs">
+        <div class="container">
+            <?php yoast_breadcrumb('<p class="breadcrumbs">', '</p>'); ?>
+        </div>
+    </div>
+<?php endif; ?>
