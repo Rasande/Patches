@@ -163,3 +163,10 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         }
     }
 }
+
+.icon-arrow {
+    border: solid $dark-color;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+}
