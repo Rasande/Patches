@@ -4,7 +4,7 @@
 .entry-header {
     padding: $space-xxl 0;
     margin-bottom: $space-md;
-    background-color: $secondary-color;
+    background-color: $primary-color;
 
     .entry-header-title {
         margin: 1rem 0;
@@ -17,12 +17,12 @@
     font-size: $small-font-size;
 
     a {
-        color: $primary-color;
+        color: $accent-color;
         text-decoration: none;
 
         &:hover,
         &:focus {
-            color: $secondary-color;
+            text-decoration: underline;
         }
     }
 }

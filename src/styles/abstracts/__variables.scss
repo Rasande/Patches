@@ -38,7 +38,7 @@ $h6-font-sizes: (
     Colors
 ------------------------------------------------- */
 $primary-color: #3858e9;
-$secondary-color: #33f078;
+$secondary-color: #1f313d;
 $accent-color: #ff7b00;
 $dark-color: #2c3338;
 $light-color: #ffffff;
@@ -68,10 +68,10 @@ $container: map-get($breakpoints, "sm");
 $container-wide: map-get($breakpoints, "md");
 $container-lg: map-get($breakpoints, "lg");
 
-$grid-gutter: 3.6rem;
+$grid-gutter: 36px;
 $grid-margin: $grid-gutter / 2;
 
-$space-unit: 1rem;
+$space-unit: 16px;
 
 $space-xs: $space-unit * 0.25;
 $space-sm: $space-unit * 0.75;

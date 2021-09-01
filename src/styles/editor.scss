@@ -11,5 +11,9 @@
     padding: $space-xxl 0;
     margin-bottom: $space-md;
     color: $light-color;
-    background-color: $secondary-color;
+    background-color: $primary-color;
+}
+
+.editor-post-title__input {
+    @include font-size($h1-font-sizes);
 }

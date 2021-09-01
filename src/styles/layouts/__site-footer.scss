@@ -3,16 +3,16 @@
 
 .site-footer {
     margin-top: $space-xl;
-    padding: $space-xl 0 $space-lg;
+    padding: $space-xxl 0 $space-xxl;
     color: $light-color;
-    background-color: $primary-color;
+    background-color: $secondary-color;
 
     a {
-        color: $secondary-color;
+        color: $accent-color;
 
         &:hover,
         &:focus {
-            color: $accent-color;
+        text-decoration: underline;
         }
     }
 
