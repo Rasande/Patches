@@ -33,7 +33,7 @@
 				<!-- Toggles -->
 				<div class="toggles">
 
-					<button class="modal-search-toggle btn-clean" aria-expanded="false"></button>
+					<a class="modal-search-toggle btn-clean" aria-expanded="false"><?php rasande_the_svg( 'ui', 'search', 18, 18 ); ?></a>
 
 					<!-- Hamburger -->
 					<button data-toggle="modal" class="modal-navigation-toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e('Toggle navigation', 'rasande'); ?>" aria-expanded="false">

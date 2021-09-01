@@ -4,12 +4,6 @@
 /* -------------------------------------------------
     Document setup
 ------------------------------------------------- */
-:root {
-    @each $name, $color in $theme-colors {
-        --#{$name}: #{$color};
-    }
-}
-
 html {
     font-size: 62.5%;
 }
@@ -142,6 +136,7 @@ acronym {
 }
 
 hr {
+    max-width: 160px;
 }
 
 a {
@@ -172,7 +167,7 @@ hr {
 ------------------------------------------------- */
 ul,
 ol {
-    margin: 2.4rem 0 2.4rem 2.4rem;
+    margin: 0 0 1em 0;
     list-style-position: inside;
 }
 
@@ -273,10 +268,6 @@ pre code {
 /* -------------------------------------------------
     Media
 ------------------------------------------------- */
-figure {
-    margin: 0;
-}
-
 iframe {
     border: none;
     display: block;

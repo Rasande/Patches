@@ -395,6 +395,21 @@ if (!function_exists('rasande_excerpt_more')) {
 }
 
 /* -------------------------------------------------
+    SVG icon function
+------------------------------------------------- */
+if ( ! function_exists( 'rasande_the_svg' ) ) :
+	function rasande_the_svg( $group, $icon, $width = 24, $height = 24 ) {
+		echo rasande_get_svg( $group, $icon, $width, $height );
+	}
+endif;
+
+if ( ! function_exists( 'rasande_get_svg' ) ) :
+	function rasande_get_svg( $group, $icon, $width = 24, $height = 24 ) {
+		return Rasande_SVG_Icons::get_svg( $group, $icon, $width, $height );
+	}
+endif;
+
+/* -------------------------------------------------
     Return read time
 ------------------------------------------------- */
 if (!function_exists('rasande_read_time')) {

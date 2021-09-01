@@ -20,7 +20,7 @@ input[type="submit"],
     color: $body-text-color;
     cursor: pointer;
     display: inline-flex;
-    font-size: 1.6rem;
+    font-size: $base-font-size;
     font-weight: 700;
     justify-content: center;
     letter-spacing: 0;

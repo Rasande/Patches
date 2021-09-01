@@ -1,2 +1,22 @@
 @use '../abstracts/_variables' as *;
 @use '../abstracts/_mixins' as *;
+
+:root {
+    @each $name, $color in $theme-colors {
+        --#{$name}: #{$color};
+    }
+}
+
+/* -------------------------------------------------
+    WordPress color classes
+------------------------------------------------- */
+
+@each $name, $color in $theme-colors {
+    .has-#{$name}-color {
+        color: $color;
+        border-color: $color;
+    }
+    .has-#{$name}-background-color {
+        background-color: $color;
+    }
+}

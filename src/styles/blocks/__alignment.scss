@@ -1,14 +1,25 @@
 @use '../abstracts/_variables' as *;
 @use '../abstracts/_mixins' as *;
 
-.entry-content > *:not(.alignfull) {
-	width: 100%;
-	max-width: $container;
-	margin: $grid-gutter auto;
-	padding: 0 $grid-margin;
+.entry-content {
+	display: grid;
+	justify-items: center;
 }
 
-.entry-content > *:not(.alignfull).alignwide {
+.entry-content > * {
+	width: 100%;
+	max-width: $container;
+	padding: 0 $grid-margin;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.entry-content > *.alignwide, .wp-block[data-align="wide"] {
 	max-width: $container-wide;
-	margin: $grid-margin auto;
+}
+
+.entry-content > *.alignfull, .wp-block[data-align="full"] {
+	width: 100%;
+	max-width: 100%;
+	padding: 0;
 }

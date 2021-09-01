@@ -4,34 +4,34 @@
 $body-font: "Open sans", sans-serif;
 $headings-font: "Archivo", sans-serif;
 
-$base-font-size: 1.8rem;
-$small-font-size: 1.4rem;
+$base-font-size: 18px;
+$small-font-size: 14px;
 
 $h1-font-sizes: (
-    null: 2.4rem,
-    sm: 2.8rem,
-    md: 3.2rem,
+    null: 24px,
+    sm: 28px,
+    md: 32px,
 );
 $h2-font-sizes: (
-    null: 2.1rem,
-    sm: 2.4rem,
-    md: 2.8rem,
+    null: 21px,
+    sm: 24px,
+    md: 28px,
 );
 $h3-font-sizes: (
-    null: 2rem,
-    sm: 2.1rem,
-    md: 2.4rem,
+    null: 20px,
+    sm: 21px,
+    md: 24px,
 );
 $h4-font-sizes: (
-    null: 1.9rem,
-    sm: 2rem,
-    md: 2.1rem,
+    null: 19px,
+    sm: 20,
+    md: 21px,
 );
 $h5-font-sizes: (
-    null: 1.9rem,
+    null: 19px,
 );
 $h6-font-sizes: (
-    null: 1em,
+    null: 16px,
 );
 
 /* -------------------------------------------------
@@ -46,7 +46,7 @@ $light-color: #ffffff;
 $body-bg-color: #f0f0f1;
 $body-text-color: $dark-color;
 $body-text-color-secondary: #bcbcbc;
-$border-color: #2b2b2b;
+$border-color: $dark-color;
 $success-color: #6cbd7f;
 $warning-color: #ffc107;
 $error-color: #dc3545;
@@ -71,7 +71,7 @@ $container-lg: map-get($breakpoints, "lg");
 $grid-gutter: 3.6rem;
 $grid-margin: $grid-gutter / 2;
 
-$space-unit: 1.25rem;
+$space-unit: 1rem;
 
 $space-xs: $space-unit * 0.25;
 $space-sm: $space-unit * 0.75;
