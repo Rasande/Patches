@@ -292,12 +292,12 @@ if (!function_exists('rasande_admin_bar_css')) {
                     position: fixed;
                 }
 
-                .site-header.is-fixed {
+                .site-header.is-fixed, body.scroll-locked {
                     margin-top: 46px;
                 }
 
                 @media screen and (min-width: 783px) {
-                    .site-header.is-fixed {
+                    .site-header.is-fixed, body.scroll-locked {
                         margin-top: 32px;
                     }
                 }

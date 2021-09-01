@@ -1,16 +1,24 @@
 class Utility {
 
     static bodyScrollLock() {
+        const html = document.querySelector('html');
         const scrollY = window.scrollY
+
+        html.style.scrollBehavior = 'initial'
+        document.body.classList.add('scroll-locked')
         document.body.style.position = 'fixed'
         document.body.style.top = -scrollY + 'px'
     }
     
     static bodyScrollUnlock() {
+        const html = document.querySelector('html');
         const bodyStyle = document.body.style.top;
+        document.body.classList.remove('scroll-locked')
+
         document.body.style.position = '';
         document.body.style.top = '';
         window.scrollTo(0, parseInt(bodyStyle || 0) * -1);
+        html.style.scrollBehavior = 'smooth'
     }
 
     static textareaHeight(value) {
