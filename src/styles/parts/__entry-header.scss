@@ -3,7 +3,7 @@
 
 .entry-header {
     padding: $space-xxl 0;
-    margin-bottom: $space-md;
+    margin-bottom: $space-lg;
     background-color: $primary-color;
 
     .entry-header-title {
@@ -13,7 +13,8 @@
 }
 
 .breadcrumbs {
-    margin-bottom: $space-md;
+    margin-top: -$space-md;
+    margin-bottom: $space-xl;
     font-size: $small-font-size;
 
     a {

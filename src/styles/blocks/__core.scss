@@ -5,7 +5,7 @@
     Paragraph
 ------------------------------------------------- */
 p.has-background {
-    padding: 4rem;
+    padding: 4em;
 }
 
 .has-drop-cap:not(:focus):first-letter {
@@ -54,7 +54,7 @@ h3.has-background,
 h4.has-background,
 h5.has-background,
 h6.has-background {
-    padding: 4rem;
+    padding: 4em;
 }
 
 /* -------------------------------------------------
@@ -89,6 +89,24 @@ h6.has-background {
 ------------------------------------------------- */
 
 /* -------------------------------------------------
+    File
+------------------------------------------------- */
+.wp-block-file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $grid-margin;
+    background-color: $body-bg-color-secondary;
+}
+
+/* -------------------------------------------------
+    Buttons
+------------------------------------------------- */
+.wp-block-buttons {
+    margin-bottom: $grid-gutter;
+}
+
+/* -------------------------------------------------
     Group
 ------------------------------------------------- */
 .wp-block-group {
@@ -109,6 +127,10 @@ h6.has-background {
 hr.wp-block-separator {
     max-width: 160px;
     margin: 6rem auto;
+
+    &.is-style-wide  {
+        width: 90%;
+    }
 
     &.is-style-wide, &.is-style-dots  {
         max-width: calc(#{$container} - (#{$grid-margin} * 2));

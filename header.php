@@ -28,12 +28,23 @@
 				endif; ?>
 
 				<!-- Primary navigation-->
-				<?php get_template_part('inc/parts/primary-nav'); ?>
+				<nav class="navigation primary-nav">
+					<?php wp_nav_menu(array(
+						'theme_location' => 'primary',
+						'container' => '',
+						'menu_class' => 'primary-nav-menu',
+						'menu_id' => 'primary-nav-menu',
+						'walker' => new Rasande_WP_Navwalker(),
+						'fallback_cb' => '',
+						'depth' => '3'
+					));
+					?>
+				</nav>
 
 				<!-- Toggles -->
 				<div class="toggles">
 
-					<a class="modal-search-toggle btn-clean" aria-expanded="false"><?php rasande_the_svg( 'ui', 'search', 18, 18 ); ?></a>
+					<a class="modal-search-toggle btn-clean" aria-expanded="false"><?php rasande_the_svg('ui', 'search', 18, 18); ?></a>
 
 					<!-- Hamburger -->
 					<button data-toggle="modal" class="modal-navigation-toggle hamburger hamburger--squeeze" type="button" aria-label="<?php esc_attr_e('Toggle navigation', 'rasande'); ?>" aria-expanded="false">

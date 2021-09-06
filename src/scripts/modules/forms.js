@@ -1,4 +1,4 @@
-import Utility from "./utility";
+import Utils from "./utils";
 
 class Forms {
   constructor() {
@@ -21,7 +21,7 @@ class Forms {
 
   setTextareaHeight(el) {
     const target = el;
-    target.style.height = Utility.textareaHeight(target.value) + "px";
+    target.style.height = Utils.textareaHeight(target.value) + "px";
   }
 
   customSelectDropdown() {

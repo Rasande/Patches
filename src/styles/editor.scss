@@ -1,7 +1,6 @@
 @use 'abstracts' as *;
 @use 'base';
 @use 'blocks';
-@use 'parts/_entry-header';
 
 .wp-block {
     max-width: calc(#{$container} - (#{$grid-margin} 2) );

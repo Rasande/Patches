@@ -1,4 +1,4 @@
-class Utility {
+class Utils {
 
     static bodyScrollLock() {
         const html = document.querySelector('html');
@@ -38,4 +38,4 @@ class Utility {
 
 }
 
-export default Utility
+export default Utils

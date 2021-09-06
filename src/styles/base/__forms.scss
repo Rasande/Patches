@@ -21,7 +21,7 @@ legend {
 
 label {
     display: block;
-    font-size: 1.5rem;
+    font-size: $small-font-size;
     margin: 0 0 0.5rem 0;
 }
 
@@ -69,11 +69,11 @@ textarea {
     box-shadow: none;
     color: $body-text-color;
     display: block;
-    font-size: 1.6rem;
+    font-size: $base-font-size;
     line-height: normal;
     margin: 0;
     max-width: 100%;
-    padding: 1.5rem 1.8rem;
+    padding: 1em;
     width: 100%;
 }
 
@@ -122,8 +122,9 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-// CF7 Responses
-
+/* -------------------------------------------------
+    Contact form 7
+------------------------------------------------- */
 .wpcf7 form .wpcf7-response-output {
     border: none;
     padding: 2em;

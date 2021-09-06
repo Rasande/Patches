@@ -44,6 +44,7 @@ $dark-color: #2c3338;
 $light-color: #ffffff;
 
 $body-bg-color: #f0f0f1;
+$body-bg-color-secondary: $light-color;
 $body-text-color: $dark-color;
 $body-text-color-secondary: #bcbcbc;
 $border-color: $dark-color;
@@ -68,10 +69,10 @@ $container: map-get($breakpoints, "sm");
 $container-wide: map-get($breakpoints, "md");
 $container-lg: map-get($breakpoints, "lg");
 
-$grid-gutter: 36px;
+$grid-gutter: 2rem;
 $grid-margin: $grid-gutter * 0.5;
 
-$space-unit: 16px;
+$space-unit: 1em;
 
 $space-xs: $space-unit * 0.25;
 $space-sm: $space-unit * 0.75;

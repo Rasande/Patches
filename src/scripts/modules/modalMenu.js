@@ -1,4 +1,4 @@
-import Utility from "./utility"
+import Utils from "./utils"
 
 class ModalMenu {
     constructor() {
@@ -54,7 +54,7 @@ class ModalMenu {
         const id = menu.getAttribute('data-name')
         const menuBtn = document.querySelector('[data-toggle="' + id + '"]')
 
-        Utility.bodyScrollLock()
+        Utils.bodyScrollLock()
 
         this.header.classList.add('is-scrolled')
 
@@ -69,7 +69,7 @@ class ModalMenu {
         const id = menu.getAttribute('data-name')
         const menuBtn = document.querySelector('[data-toggle="' + id + '"]')
 
-        Utility.bodyScrollUnlock()
+        Utils.bodyScrollUnlock()
 
         menu.classList.remove('is-open')
         menuBtn.classList.remove('is-active')
